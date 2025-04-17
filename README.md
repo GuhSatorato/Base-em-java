@@ -2,119 +2,299 @@
 
 ## 🚀 Começando com Java
 
-- **Java** ☕: Linguagem de programação orientada a objetos, multiplataforma e robusta.  
-- **start** ▶️: Para começar, você precisa instalar o **JDK**.
+- **Java** ☕: Java é uma linguagem de programação que roda em qualquer sistema operacional por conta da JVM 
+- **start** ▶️: Para começar a utilizar a linguagem JAVA, você precisa instalar o **JDK**.
 
 ## 📦 JDK, JRE, JVM e Executáveis
 
-- **JDK (Java Development Kit)** 🛠️: Kit para desenvolvedores — inclui tudo para programar em Java (compilador, ferramentas, JRE).  
-- **JRE (Java Runtime Environment)** 🔁: Ambiente para rodar programas Java (inclui JVM).  
-- **JVM (Java Virtual Machine)** ⚙️: A máquina virtual que executa bytecode Java.  
-- **java.exe** 📥: Executa programas compilados (.class).  
-- **javac.exe** 🛠️: Compila arquivos `.java` para `.class`.  
-- **.class** 📄: Arquivo gerado após a compilação de um `.java`. Contém bytecode que será interpretado pela JVM.  
-- **Bytecode** 🔢: Código intermediário gerado a partir do código-fonte Java. Ele não é código nativo, mas sim um formato de instrução para a JVM. É o que torna o Java multiplataforma, pois a JVM interpreta o bytecode de maneira que o programa possa ser executado em qualquer sistema operacional.
+- **JDK (Java Development Kit)** 🛠️: Kit de Desenvolvimento JAVA, como dito anteriormente é necessário para utilizar o JAVA, pois inclui tudo para programar em JAVA (compilador, ferramentas, JRE).
+- **JRE (Java Runtime Environment)** 🔁: Ambiente para rodar programas Java (inclui JVM).
+- **JVM (Java Virtual Machine)** ⚙️: A máquina virtual que executa o Java.
+- **java.exe** 📥: Executa programas compilados (.class).
+- **javac.exe** 🛠️: Compila arquivos `.java` para `.class`.
+- **.class** 📄: Arquivo gerado após a compilação de um `.java`. Contém o código que será interpretado pela JVM.
 
-## 🧱 Classe, Objeto e Fluxo
+## 🧱 Classe, Objeto, Atributo e Método
 
-- **Classe** 🧩: Molde ou blueprint que define as características (atributos) e comportamentos (métodos) de um tipo de objeto.  
-  Exemplo: a classe `Carro` pode ter atributos como `cor` e `modelo`, e métodos como `acelerar()` ou `frear()`.  
-- **Objeto** 🚗: Instância (exemplar) de uma classe. Ele é criado a partir da classe e pode usar seus atributos e métodos.  
-  Exemplo: `meuCarro` é um objeto da classe `Carro`.  
-- **Fluxo** 🔄: Ordem de execução do programa. Em Java, o ponto de partida é sempre o método `main()`. A partir dele, o programa segue uma sequência lógica, linha por linha, executando condições (`if`, `switch`), repetições (`for`, `while`) e chamadas de métodos.  
-- **Variável / Atributo** 🧮: Espaço na memória para armazenar informações.  
-  - **Variável**: Usada dentro de métodos para armazenar dados temporários.  
-  - **Atributo**: Variável que pertence à classe — define as características do objeto.  
-    Exemplo: `cor`, `modelo` e `velocidade` são atributos da classe `Carro`.
+- **Classe** 🧩forma: A classe é um molde para criar um objeto\
+  Exemplo: Como se você fosse fazer um bolo, primeiro você reserva a forma e depois faz o bolo, no caso a forma seria a **Classe** **e o bolo seria o Objeto**.
+
+- **Objeto** 🎂: Instância de uma classe. Ele é criado a partir da classe e pode usar seus atributos e métodos.\
+  Exemplo: após você reservar a forma (**Classe)** vc faz o bolo (**Objeto)**, porem você pode fazer vários sabores de bolo, então você pode ter vários (**Objeto)**.
+
+- **Atributo e Método**🧮
+
+  - **Atributo**: característica ou informação do objeto (ex: tamanho e sabor).
+  - **Método**: Método é a ação que o objeto pode realizar. (ex: assar o bolo, rechear o bolo)
+
+- **Resumo 📖**
+
+  - **Classe** = a forma de fazer bolo (molde para o objeto)
+  - **Objeto** = o bolo feito
+  - **Atributos** = sabor, tamanho
+  - **Método** = assar()
+
+## ⚙️ Tipos de Dados
+  - **int** 🖥: Números inteiros. **ex:** 12.
+  - **string** 📝: Texto. **ex:** "Chocolate".
+  - **float** 📊: Números de ponto flutuante. **ex:** 12.5.
+  - **boolean** 📄: Verdadeiro ou falso.
+
+## ↪ Desvio de Fluxo
+- **if** 📜: Se.
+` ...
+if (numero > 5) {
+            System.out.println("O número é maior que 5.");
+        }
+...
+` 
+- **else** 📜: Senão.
+` ...
+else {
+            System.out.println("O número é 5 ou menor.");
+        }
+...
+` 
+- **for** 📜: Para.
+` ...
+for (int i = 1; i <= 5; i++) {
+            System.out.println("Contando: " + i);
+        }
+...
+` 
+- **while** 📜: Enquanto.
+` ...
+while (i <= 5) {
+            System.out.println("Contando: " + i);
+            i++;
+        }
+...
+`
 
 ## 🔒 Encapsulamento
 
-- **Encapsulamento** 📦: Ocultar detalhes internos do objeto, expondo só o necessário.  
-- **private** 🔐: Acesso restrito à própria classe.  
-- **public** 🌐: Acesso liberado para todos.
+- **Encapsulamento** 📦: Protege os dados interos de uma classe, impedindo de serem alterados externamente.
+    Exemplo: Como guardar uma coisa dentro de uma "caixa", e deixar visível somente o que for necessário.
+- **private** 🔐: Só pode ser acessado dentro da propria classe.
+    Exemplo: Igual guardar seu dinheiro na gaveta (**classe**), mais ninguem pode acessar (**private**).
+- **public** 🌐: Pode ser acessado de qualquer lugar.
+    Exemplo: Um botão de elevador, que pode ser acessado por qualquer pessoa (**public**).
 
 ## 🛠️ Métodos Especiais
 
-- **Get/Set** ↕️:  
-  - `getNome()` 🧐 → retorna um valor.  
+- **Get/Set** ↕️:
+
+  - `getNome()` 🧐 → retorna um valor.
   - `setNome("João")` ✍️ → define um valor.
 
 - **This** 👈: Referência ao próprio objeto (útil quando há ambiguidade).
+    Exemplo: No método `setNome`, `this.nome` é uma referência ao atributo `nome` do objeto atual.
+    ```java	
+    public void setNome(String nome) {
+            this.nome = nome;
+        }
+    ```
+
+- **static** 📜: Static é algo que pertence a classe e não a um objeto, util para metodos que são iguais para todos os objetos da classe
+- **final** 📜: Não pode ser alterado depois de definido, algo imutavel.
 
 ## 🧬 Construtor, Sobrecarga e Subscrita
 
-- **Método Construtor** 🏗️: Método especial chamado ao criar o objeto.  
-- **Sobrecarga (Overload)** ➕: Vários métodos com o mesmo nome, mas diferentes parâmetros.  
-- **Subscrita (Override)** 🔁: Reescrever um método da superclasse na subclasse.
+- **Método Construtor** 🏗️: Um metodo que quando um objeto é criado, é executado automaticamente.
+    Exemplo
+    ```java
+        class Pessoa {
+        String nome;
+
+        // Construtor
+        Pessoa(String n) {
+            nome = n;
+        }
+    }
+
+    Pessoa pessoa1 = new Pessoa("Gustavo"); // Chama o construtor
+    Pessoa pessoa2 = new Pessoa("Henrique"); // Chama o construtor
+    ```
+- **Sobrecarga (Overload)** ➕: Vários métodos com o mesmo nome, mas diferentes parâmetros, serve para usar o metodo mais de uma maneira diferente.
+    Exemplo
+    ```java
+    class Soma {
+        int somar(int a, int b) {
+            return a + b;
+        }
+
+        double somar(double a, double b) {
+            return a + b;
+        }
+    }
+    ```
+- **Subscrita (Override)** 🔁: É quando uma subclasse reescreve um método da superclasse, serve para mudar o metodo da classe pai.
+    Exemplo
+    ```java
+    class Animal {
+        void fazerSom() {
+            System.out.println("Miado");
+        }
+    }
+
+    class Cachorro extends Animal {
+        @Override
+        void fazerSom() {
+            System.out.println("Latido");
+        }
+    }
+    ```
 
 ## 🔢 Parâmetros
 
-- **Parâmetros** 📏: Variáveis usadas em métodos para passar informações. Eles permitem que você forneça dados para os métodos e manipule-os de acordo.  
-  Exemplo: no método `soma(int a, int b)`, `a` e `b` são parâmetros que serão usados para realizar a operação.
+- **Parâmetros** 📏: Atributos que vão entre parrenteses dentro do metodo, eles recebem valores quando o metodo é chamado.
+    - Resumindo são caixas que recebem valores.
+- Exemplo
+    ```java
+    class Matematica {
+        // Método com dois parâmetros: a e b
+        int soma(int a, int b) {
+            return a + b;
+        }
+    }
+    ```
+    ```java
+    public class TestaMatematica {
+        public static void main(String[] args) {
+            Matematica m = new Matematica();
+            int resultado = m.soma(5, 3); // Aqui 5 e 3 são passados como valores pros parâmetros
+            System.out.println("Resultado: " + resultado); // Mostra 8
+        }
+    }
+    ```
 
 ---
 
 ## 📂 Exemplo Comentado com Classe, Objeto, Construtor e Getters
 
-### `Fgeo.java`
+### `Bolo.java`
 
 ```java
-// Definição da classe Fgeo
-class Fgeo {
-    // Atributos privados: comprimento(c), largura(l) e altura(h)
-    private int c;
-    private int l;
-    private int h;
+class Bolo {
+    // Atributos (características do bolo)
+    String sabor;
+    String tamanho;
 
-    // Construtor da classe que recebe altura, largura e comprimento como parâmetros
-    public Fgeo(int h, int l, int c){
-        this.c = c; // Atribui o valor de c ao atributo da classe
-        this.l = l; // Atribui o valor de l ao atributo da classe
-        this.h = h; // Atribui o valor de h ao atributo da classe
+    // Método (ação que o bolo pode realizar)
+    void assar() {
+        System.out.println("O bolo de " + sabor + " de tamanho " + tamanho + " está assando.");
     }
 
-    // Método getter para obter o valor de c
-    public int getC() {
-        return c;
-    }
-
-    // Método getter para obter o valor de l
-    public int getL() {
-        return l;
-    }
-
-    // Método getter para obter o valor de h
-    public int getH() {
-        return h;
+    void rechear() {
+        System.out.println("O bolo de " + sabor + " está sendo recheado.");
     }
 }
 ```
 
 ---
 
-### `Teste.java`
+### `TestaBolo.java`
 
 ```java
-// Classe principal com o método main, ponto de partida do programa
-public class Teste {
+public class TestaBolo {
     public static void main(String[] args) {
+        // Criando objetos (bolos)
+        Bolo bolo1 = new Bolo();
+        bolo1.sabor = "chocolate";
+        bolo1.tamanho = "grande";
+        
+        Bolo bolo2 = new Bolo();
+        bolo2.sabor = "morango";
+        bolo2.tamanho = "pequeno";
 
-        // Criação de um objeto da classe Fgeo, passando altura=10, largura=5 e comprimento=2
-        Fgeo dimensoes = new Fgeo(10, 5, 2);
+        // Chamando os métodos (ações)
+        bolo1.assar();
+        bolo1.rechear();
 
-        // Chamada dos métodos getters para acessar os valores armazenados no objeto
-        int c = dimensoes.getC(); // Obtém o comprimento
-        int l = dimensoes.getL(); // Obtém a largura
-        int h = dimensoes.getH(); // Obtém a altura
-
-        // Impressão dos valores no console
-        System.out.println("C: " + c); // Exibe o comprimento
-        System.out.println("L: " + l); // Exibe a largura
-        System.out.println("H: " + h); // Exibe a altura
+        bolo2.assar();
+        bolo2.rechear();
     }
 }
 ```
 
 ---
 
-👨‍💻 Com isso, você já tem uma base sólida pra começar em Java!
+## 🧾 Software Real: Cadastro de Produtos
+
+### `Produto.java`
+
+```java
+// Classe Produto representa um item com nome, preço e quantidade
+public class Produto {
+    private String nome; // Atributo para armazenar o nome do produto
+    private double preco; // Atributo para armazenar o preço do produto
+    private int quantidade; // Atributo para armazenar a quantidade em estoque
+
+    // Construtor que inicializa os atributos com os valores recebidos
+    public Produto(String nome, double preco, int quantidade) {
+        this.nome = nome; // Atribui o nome ao atributo da classe
+        this.preco = preco; // Atribui o preço ao atributo da classe
+        this.quantidade = quantidade; // Atribui a quantidade ao atributo da classe
+    }
+
+    // Métodos getters retornam os valores dos atributos
+    public String getNome() {
+        return nome;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    // Método setter atualiza o valor da quantidade
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    // Método que calcula o valor total do estoque (preço x quantidade)
+    public double calcularTotal() {
+        return preco * quantidade;
+    }
+}
+```
+
+### `Loja.java`
+
+```java
+// Importa a classe Scanner para leitura de dados pelo teclado
+import java.util.Scanner;
+
+// Classe principal Loja
+public class Loja {
+    public static void main(String[] args) {
+        // Cria um objeto Scanner para capturar entrada do usuário
+        Scanner sc = new Scanner(System.in);
+
+        // Solicita o nome do produto
+        System.out.print("Nome do produto: ");
+        String nome = sc.nextLine(); // Lê o nome digitado
+
+        // Solicita o preço do produto
+        System.out.print("Preço do produto: ");
+        double preco = sc.nextDouble(); // Lê o preço digitado
+
+        // Solicita a quantidade em estoque
+        System.out.print("Quantidade em estoque: ");
+        int quantidade = sc.nextInt(); // Lê a quantidade digitada
+
+        // Cria um objeto Produto com os dados informados
+        Produto produto = new Produto(nome, preco, quantidade);
+
+        // Exibe os dados do produto no console
+        System.out.println("\nProduto cadastrado com sucesso!");
+        System.out.println("Nome: " + produto.getNome());
+        System.out.println("Preço: R$" + produto.getPreco());
+        System.out.println("Estoque: " + produto.getQuantidade());
+        System.out.println("Valor total em estoque: R$" + produto.calcularTotal());
+    }
+}
+```
