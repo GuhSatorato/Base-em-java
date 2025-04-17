@@ -61,7 +61,7 @@
 ```java
 // Definição da classe Fgeo
 class Fgeo {
-    // Atributos privados: comprimento, largura e altura
+    // Atributos privados: comprimento(c), largura(l) e altura(h)
     private int c;
     private int l;
     private int h;
