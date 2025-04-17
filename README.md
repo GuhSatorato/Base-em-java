@@ -1,7 +1,3 @@
-Claro! Aqui está o conteúdo `.md` com os **códigos comentados** incluídos:
-
----
-
 ## ☕ Guia Intuitivo de Java com Emojis
 
 ## 🚀 Começando com Java
