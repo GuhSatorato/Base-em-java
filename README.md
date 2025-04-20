@@ -73,7 +73,7 @@ while (i <= 5) {
 
 ## 🔒 Encapsulamento
 
-- **Encapsulamento** 📦: Protege os dados interos de uma classe, impedindo de serem alterados externamente.
+- **Encapsulamento** 📦: Protege os dados internos de uma classe, impedindo de serem alterados externamente.
     Exemplo: Como guardar uma coisa dentro de uma "caixa", e deixar visível somente o que for necessário.
 - **private** 🔐: Só pode ser acessado dentro da propria classe.
     Exemplo: Igual guardar seu dinheiro na gaveta (**classe**), mais ninguem pode acessar (**private**).
